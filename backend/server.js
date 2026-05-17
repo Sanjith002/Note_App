@@ -12,18 +12,16 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-    ({
+app.use(cors({
     origin: function(origin, callback) {
         if (!origin || origin.endsWith(".pages.dev") || origin === "https://note-app-eks.pages.dev") {
-        callback(null, true);
+            callback(null, true);
         } else {
-        callback(new Error("Not allowed by CORS"));
+            callback(new Error("Not allowed by CORS"));
         }
     },
     credentials: true,
-    })
-)
+}));
 
 app.use("/uploads", express.static("uploads"));
 app.use("/api/auth", authRoutes);
