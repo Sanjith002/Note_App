@@ -22,7 +22,7 @@ const upload = multer({
         }
         cb(new Error("only images (JPEG, JPG, PNG)are accepted"))
     },
-    limits: { fieldSize: 5 * 1024 * 1024}
+    limits: { fileSize: 5 * 1024 * 1024}
 })
 
 export default upload;
