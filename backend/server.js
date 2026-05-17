@@ -13,9 +13,15 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cookieParser());
 app.use(
-    cors({
-        origin: "https://note-app-eks.pages.dev",
-        credentials: true,
+    ({
+    origin: function(origin, callback) {
+        if (!origin || origin.endsWith(".pages.dev") || origin === "https://note-app-eks.pages.dev") {
+        callback(null, true);
+        } else {
+        callback(new Error("Not allowed by CORS"));
+        }
+    },
+    credentials: true,
     })
 )
 
