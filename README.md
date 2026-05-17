@@ -6,7 +6,7 @@ A full-stack note-taking application built using React, Node.js, Express, and SQ
 
 ## 🌐 Live Demo
 
-👉 (Add your deployed link here)
+👉 https://note-app02.pages.dev/
 
 ---
 
