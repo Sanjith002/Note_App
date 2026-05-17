@@ -79,7 +79,7 @@ const Profile = () => {
           <div><span className='font-semibold'>Email :</span> <span>{user?.email}</span></div>
           <div><span className='font-semibold'>Contact :</span> <span>{user?.contact || "Not Given"}</span></div>
           <div className='w-full flex justify-center'>
-            <img src={preview? preview : user?.profile_image ? `http://localhost:5000${user.profile_image}`: "/avatar-placeholder.png"} 
+            <img src={preview? preview : user?.profile_image ? `https://note-app-1-xwg7.onrender.com${user.profile_image}`: "/avatar-placeholder.png"} 
                  alt="profile" 
                  className="w-35 h-35 mt-[10px] rounded-full object-cover"/>
           </div>
