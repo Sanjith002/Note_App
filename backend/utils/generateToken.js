@@ -6,7 +6,8 @@ const generateToken = (userId, res) => {
         maxAge : 15*24*60*60*1000,
         httpOnly : true,
         secure: true,        
-        sameSite: "None"
+        sameSite: "None",
+        path: "/"
     })
 }
 
