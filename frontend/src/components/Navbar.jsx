@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { TbLogout } from "react-icons/tb";
 import { HiMenu, HiX } from "react-icons/hi";
@@ -28,6 +28,7 @@ const Navbar = () => {
   const handleLogout = async (e) => {
     e.preventDefault();
     logout();
+    setMenuOpen(false);
   }
 
   return (
